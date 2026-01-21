@@ -1,5 +1,24 @@
-#ifndef KRUSKAL_H_INCLUDED
-#define KRUSKAL_H_INCLUDED
+
+/*
+ *
+ * Pseudo Code :
+ *
+ * function Kruskal(Graph G):
+    F := ∅  // Initialize the forest
+    for each vertex v in G.Vertices do
+        MAKE-SET(v)  // Create a set for each vertex
+
+    // Sort edges by weight
+    for each edge {u, v} in G.Edges ordered by increasing weight do
+        if FIND-SET(u) ≠ FIND-SET(v) then
+            F := F ∪ { {u, v} }  // Add edge to the forest
+            UNION(FIND-SET(u), FIND-SET(v))  // Combine sets
+
+    return F  // Return the minimum spanning forest
+
+ * 
+ * */
+
 
 struct Edge {
     int u, v, weight;
@@ -52,4 +71,4 @@ void kruskal() {
     cout << "Total weight: " << totalWeight << endl;
 }
 
-#endif // KRUSKAL_H_INCLUDED
+

@@ -1,5 +1,32 @@
-#ifndef PRIMS_H_INCLUDED
-#define PRIMS_H_INCLUDED
+
+/*
+ *  Pseudo code :
+ *
+ * function Prim(vertices, edges):
+    for each vertex in vertices:
+        cheapestCost[vertex] ← ∞
+        cheapestEdge[vertex] ← null
+
+    explored ← empty set
+    unexplored ← set containing all vertices
+
+    start with an arbitrary vertex
+    cheapestCost[start] ← 0
+
+    while unexplored is not empty:
+        u = vertex in unexplored with the smallest cheapestCost
+        add u to explored
+        remove u from unexplored
+
+        for each edge (u, v) connected to u:
+            if v is in unexplored and weight(u, v) < cheapestCost[v]:
+                cheapestCost[v] ← weight(u, v)
+                cheapestEdge[v] ← (u, v)
+
+    return cheapestEdge
+
+ *
+ * */
 
 
 int n = 6; // Number of vertices
@@ -34,8 +61,8 @@ void prim() {
         for (int v = 0; v < n; v++) {
             if (graph[u][v] && !visited[v] && graph[u][v] < key[v]) {
                 parent[v] = u;
-                key[v] = graph[u][v];.
-				
+                key[v] = graph[u][v];
+
             }
         }
     }
@@ -50,4 +77,4 @@ void prim() {
 }
 
 
-#endif // PRIMS_H_INCLUDED
+

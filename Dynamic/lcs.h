@@ -1,8 +1,33 @@
-#ifndef LCS_H_INCLUDED
-#define LCS_H_INCLUDED
+
+/*
+ *
+ * Pseudo Code :
+ * =============
+ *
+ * Function LCS(X, Y)
+    m <- length of X
+    n <- length of Y
+    Create a 2D array c[0..m, 0..n]
+
+    // Initialize the first row and column
+    for i from 0 to m
+        c[i, 0] <- 0
+    for j from 0 to n
+        c[0, j] <- 0
+
+    // Fill the array
+    for i from 1 to m
+        for j from 1 to n
+            if X[i-1] == Y[j-1] then
+                c[i, j] <- c[i-1, j-1] + 1
+            else
+                c[i, j] <- max(c[i-1, j], c[i, j-1])
+
+    return c[m, n] // Length of the longest common subsequence
+ * */
 
 
-void lcsAlgo(char *S1, char *S2, int m, int n) {
+char* lcsAlgo(char *S1, char *S2, int m, int n) {
   int LCS_table[m + 1][n + 1];
 
 
@@ -36,9 +61,9 @@ void lcsAlgo(char *S1, char *S2, int m, int n) {
       j--;
   }
   
-  cout << "S1 : " << S1 << "\nS2 : " << S2 << "\nLCS: " << lcsAlgo << "\n";
+  return lcsAlgo
+
+  //cout << "S1 : " << S1 << "\nS2 : " << S2 << "\nLCS: " << lcsAlgo << "\n";
 }
 
 
-
-#endif // LCS_H_INCLUDED

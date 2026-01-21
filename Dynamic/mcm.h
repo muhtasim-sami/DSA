@@ -1,5 +1,27 @@
-#ifndef MCM_H_INCLUDED
-#define MCM_H_INCLUDED
+
+/*
+ * Pseudo Code :
+ * =============
+ *
+ * function MatrixChainOrder(p):
+    n = length(p) - 1
+    let m be a 2D array of size n x n
+    for i from 1 to n do
+        m[i][i] = 0  // cost is zero when multiplying one matrix
+
+    for L from 2 to n do  // L is the chain length
+        for i from 1 to n - L + 1 do
+            j = i + L - 1
+            m[i][j] = ∞  // set to a large value
+            for k from i to j - 1 do
+                // Cost of multiplying matrices from i to j
+                q = m[i][k] + m[k+1][j] + p[i-1] * p[k] * p[j]
+                if q < m[i][j] then
+                    m[i][j] = q  // update minimum cost
+
+    return m[1][n]  // Minimum cost to multiply matrices from 1 to n
+ *
+ * */
 
 
 #define INF = 1000000000;
@@ -42,4 +64,4 @@ int matrixChainMultiplication()
 }
 
 
-#endif // MCM_H_INCLUDED
+
