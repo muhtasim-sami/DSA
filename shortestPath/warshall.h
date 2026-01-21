@@ -1,3 +1,13 @@
+/*
+ * Pseudo Code :
+ * =============
+ *
+for each vertex k:
+    for each vertex i:
+        for each vertex j:
+            if dist[i][j] > dist[i][k] + dist[k][j]:
+                dist[i][j] = dist[i][k] + dist[k][j]
+*/
 
 #ifndef WARSHALL_H_INCLUDED
 #define WARSHALL_H_INCLUDED
