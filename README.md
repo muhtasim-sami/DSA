@@ -23,6 +23,7 @@
   Quick Comparison Table
 
 |Feature |	Kruskal| 	Prim|
+|---|---|---|
 |Strategy|	Grows a forest of trees by adding the smallest edges.	|Grows a single tree from a starting vertex.|
 |MST Property	|Always keeps a subset of edges without cycles; it might not be connected until the end.|	Always keeps the current set of edges as a single connected tree.|
 |Time Complexity	|O(E log E) or O(E log V).	|O(V²) or O(E + V log V) using Fibonacci heaps.|
