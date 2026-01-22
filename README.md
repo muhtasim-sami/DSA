@@ -7,7 +7,7 @@
 - Floyd Warshall
 - Bellman Ford
    Quick Comparison Table
-Feature |	Dijkstra |	Bellman-Ford |	Floyd-Warshall |
+| Feature |	Dijkstra |	Bellman-Ford |	Floyd-Warshall |
 |----|----|----|----|
 | Type |	SSSP |	SSSP |	APSP |
 |Negative | Edges	No	| Yes	| Yes (No Negative Cycles) |
