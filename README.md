@@ -11,7 +11,7 @@
 | Feature |	Dijkstra |	Bellman-Ford |	Floyd-Warshall |
 |---|---|---|---|
 | Type |	Single-Source Shortest Path (SSSP) | Single-Source Shortest Path	(SSSP) |	All-Pairs Shortest Path  (APSP) |
-| Negative | Edges	No	| Yes	| Yes (No Negative Cycles) |
+| Negative Edges |	No	| Yes	| Yes (No Negative Cycles) |
 | Negative Cycle| Detection|	No |	Yes |	Yes |
 | Complexity |	O(E + V log V)	| O(V * E) |	O(V^3) |
 | Approach	| Greedy	| DP	| DP|
